@@ -1,0 +1,122 @@
+.courses-container .card {
+  width: 240px;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  padding: 16px;
+  box-shadow: 0 9px 17px -6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: all 400ms ease;
+}
+
+.courses-container .card:hover {
+  transform: scale(1.03);
+}
+
+.courses-container,
+.courses-container * {
+  box-sizing: border-box;
+}
+
+.courses-container .card a {
+  text-decoration: none;
+  color: #14213d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.courses-container .card img {
+  margin: -16px;
+  object-fit: cover;
+}
+
+.courses-container .card .category {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #14213d;
+  color: #fff;
+  padding: 2px 16px;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.courses-container .card h2.title {
+  font-size: 20px;
+  margin: 28px 0 10px 0;
+  line-height: 1.4;
+}
+
+.courses-container .card .description {
+  font-size: 15px;
+  color: #333;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.courses-container .card .info {
+  display: flex;
+  justify-content: space-between;
+  background: #edf6f9;
+  margin: -16px;
+  margin-top: 20px;
+  padding: 12px 16px;
+  align-items: center;
+}
+
+.courses-container .card .info .price {
+  font-size: 28px;
+  font-weight: 900;
+  color: #df0688;
+}
+
+.courses-container .card .info .price::before {
+  content: "$";
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.courses-container .card .info .duration {
+  display: flex;
+}
+
+.courses-container .card .info .time-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.courses-container .card .info .duration::after {
+  content: "Hrs";
+  margin-left: 4px;
+}
+
+.courses-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+@media (max-width: 850px) {
+  .courses-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .courses-container .card {
+    width: 100%;
+  }
+
+  .courses-container .card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .courses-container {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+}
